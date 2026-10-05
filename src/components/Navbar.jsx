@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Volume2, VolumeX, Image as ImageIcon, Sparkles } from 'lucide-react';
 import { toggleAudioState } from '../utils/audioSynth';
+import SpsLogoMark from './SpsLogoMark';
 
 export default function Navbar({ onOpenImageManager }) {
   const [isAudioActive, setIsAudioActive] = useState(false);

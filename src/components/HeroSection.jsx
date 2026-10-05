@@ -2,8 +2,9 @@ import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ChevronDown, MapPin, Building2 } from 'lucide-react';
+import { ChevronDown, MapPin } from 'lucide-react';
 import { getStoredImage } from '../utils/imagePaths';
+import SpsLogoMark from './SpsLogoMark';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -84,16 +85,16 @@ export default function HeroSection() {
         ref={contentRef}
         className="relative z-20 max-w-6xl mx-auto px-6 text-center flex flex-col items-center justify-center pt-16"
       >
-        {/* Badge 1: SPS '26 */}
+        {/* Badge 1: SPS '26 Custom Logo Badge */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-400/40 backdrop-blur-md mb-6 shadow-[0_0_20px_rgba(0,240,255,0.25)]"
+          className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-400/40 backdrop-blur-md mb-6 shadow-[0_0_20px_rgba(0,240,255,0.25)]"
         >
-          <Building2 className="w-3.5 h-3.5 text-cyan-400" />
+          <SpsLogoMark variant="icon" size="sm" />
           <span className="font-mono-tech text-xs sm:text-sm font-bold tracking-label-clean text-cyan-300 uppercase">
-            SPS '26
+            SPS '26 BATCH
           </span>
           <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-ping" />
         </motion.div>

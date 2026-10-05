@@ -1,6 +1,7 @@
 import React from 'react';
 import { Sparkles, Heart } from 'lucide-react';
 import { getStoredImage } from '../utils/imagePaths';
+import SpsLogoMark from './SpsLogoMark';
 
 export default function FinalPhotoReveal() {
   const groupImgUrl = getStoredImage('group');
@@ -33,7 +34,7 @@ export default function FinalPhotoReveal() {
 
         <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between text-white z-20">
           <div className="flex items-center gap-3 bg-black/60 backdrop-blur-md px-4 py-2 rounded-xl border border-white/10">
-            <Sparkles className="w-4 h-4 text-cyan-400" />
+            <SpsLogoMark variant="icon" size="sm" />
             <span className="font-mono-tech text-xs tracking-label-clean text-cyan-300">
               SPS '26 • SUTHERLAND CHENNAI 2026
             </span>
@@ -48,6 +49,10 @@ export default function FinalPhotoReveal() {
 
       {/* Footer Typography */}
       <div className="relative z-10 text-center pb-12 flex flex-col items-center">
+        <div className="mb-6">
+          <SpsLogoMark variant="full" size="lg" />
+        </div>
+
         <h3 className="font-display text-2xl sm:text-4xl font-black text-white uppercase tracking-heading-lg mb-2">
           THE END OF CHAPTER ONE.
         </h3>
